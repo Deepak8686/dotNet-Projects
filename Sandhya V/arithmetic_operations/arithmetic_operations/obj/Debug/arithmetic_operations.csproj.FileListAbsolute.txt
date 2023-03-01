@@ -1,0 +1,8 @@
+C:\Users\Sandhya V\Documents\c# projects\arithmetic_operations\arithmetic_operations\obj\Debug\arithmetic_operations.csproj.AssemblyReference.cache
+C:\Users\Sandhya V\Documents\c# projects\arithmetic_operations\arithmetic_operations\obj\Debug\arithmetic_operations.csproj.SuggestedBindingRedirects.cache
+C:\Users\Sandhya V\Documents\c# projects\arithmetic_operations\arithmetic_operations\obj\Debug\arithmetic_operations.csproj.CoreCompileInputs.cache
+C:\Users\Sandhya V\Documents\c# projects\arithmetic_operations\arithmetic_operations\bin\Debug\arithmetic_operations.exe.config
+C:\Users\Sandhya V\Documents\c# projects\arithmetic_operations\arithmetic_operations\bin\Debug\arithmetic_operations.exe
+C:\Users\Sandhya V\Documents\c# projects\arithmetic_operations\arithmetic_operations\bin\Debug\arithmetic_operations.pdb
+C:\Users\Sandhya V\Documents\c# projects\arithmetic_operations\arithmetic_operations\obj\Debug\arithmetic_operations.exe
+C:\Users\Sandhya V\Documents\c# projects\arithmetic_operations\arithmetic_operations\obj\Debug\arithmetic_operations.pdb
