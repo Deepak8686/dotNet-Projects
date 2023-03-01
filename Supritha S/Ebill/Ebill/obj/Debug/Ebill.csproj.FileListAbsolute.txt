@@ -1,0 +1,8 @@
+C:\C#\Ebill\Ebill\obj\Debug\Ebill.csproj.AssemblyReference.cache
+C:\C#\Ebill\Ebill\obj\Debug\Ebill.csproj.SuggestedBindingRedirects.cache
+C:\C#\Ebill\Ebill\obj\Debug\Ebill.csproj.CoreCompileInputs.cache
+C:\C#\Ebill\Ebill\bin\Debug\Ebill.exe.config
+C:\C#\Ebill\Ebill\bin\Debug\Ebill.exe
+C:\C#\Ebill\Ebill\bin\Debug\Ebill.pdb
+C:\C#\Ebill\Ebill\obj\Debug\Ebill.exe
+C:\C#\Ebill\Ebill\obj\Debug\Ebill.pdb
