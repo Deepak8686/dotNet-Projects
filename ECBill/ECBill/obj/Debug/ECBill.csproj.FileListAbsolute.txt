@@ -1,0 +1,16 @@
+C:\Users\Meghashree\source\repos\ECBill\ECBill\bin\Debug\ECBill.exe.config
+C:\Users\Meghashree\source\repos\ECBill\ECBill\bin\Debug\ECBill.exe
+C:\Users\Meghashree\source\repos\ECBill\ECBill\bin\Debug\ECBill.pdb
+C:\Users\Meghashree\source\repos\ECBill\ECBill\obj\Debug\ECBill.csproj.AssemblyReference.cache
+C:\Users\Meghashree\source\repos\ECBill\ECBill\obj\Debug\ECBill.csproj.SuggestedBindingRedirects.cache
+C:\Users\Meghashree\source\repos\ECBill\ECBill\obj\Debug\ECBill.csproj.CoreCompileInputs.cache
+C:\Users\Meghashree\source\repos\ECBill\ECBill\obj\Debug\ECBill.exe
+C:\Users\Meghashree\source\repos\ECBill\ECBill\obj\Debug\ECBill.pdb
+C:\Users\Meghashree\Desktop\ECBill\ECBill\bin\Debug\ECBill.exe.config
+C:\Users\Meghashree\Desktop\ECBill\ECBill\bin\Debug\ECBill.exe
+C:\Users\Meghashree\Desktop\ECBill\ECBill\bin\Debug\ECBill.pdb
+C:\Users\Meghashree\Desktop\ECBill\ECBill\obj\Debug\ECBill.csproj.AssemblyReference.cache
+C:\Users\Meghashree\Desktop\ECBill\ECBill\obj\Debug\ECBill.csproj.SuggestedBindingRedirects.cache
+C:\Users\Meghashree\Desktop\ECBill\ECBill\obj\Debug\ECBill.csproj.CoreCompileInputs.cache
+C:\Users\Meghashree\Desktop\ECBill\ECBill\obj\Debug\ECBill.exe
+C:\Users\Meghashree\Desktop\ECBill\ECBill\obj\Debug\ECBill.pdb
