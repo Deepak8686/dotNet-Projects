@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Electricity_Bill.Factory_Pattern;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,62 +7,57 @@ using System.Threading.Tasks;
 
 namespace Electricity_Bill
 {
-    public class Getdetails : Calculation
+    public class ConsoleEbill 
     {
-        string again;
-        public void data()
+        public void getdata()
         {
-            
-            do
+            InterfaceEBill result = null;
+           
+            Console.WriteLine("Enter EB id ");
+            int id = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter Customer name ");
+            string name = Console.ReadLine();
+
+            Console.WriteLine("enter units ");
+            int units = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("enter the division \n 1.commericial\n2.village\n3.Domestic");
+            string location = Convert.ToString(Console.ReadLine());
+            switch(location)
             {
-                Boolean error = false;
-                do
-                {
-                    error = false;
-                    try
+                case "1":
+                     result = new City(units);
+                    break;
+                    case"2":
+                    result = new Village(units);
+                    break;
+                    case"3":
+                    Console.WriteLine("enter the subdivision \n 1.Domestic-city\n2.Domestic-town\n3.Domestic-Village");
+                    string subdivision = Convert.ToString(Console.ReadLine());
+                    switch (subdivision)
                     {
-                        Console.WriteLine("Enter EB id ");
-                        int id = Convert.ToInt32(Console.ReadLine());
+                        case "1":
+                            result = new City(units);
+                            break;
+                        case "2":
+                            result = new Village(units);
+                            break; 
+                        case "3":
+                            result=new Domestictown(units);
+                            break;
+                        default:
+                            Console.WriteLine("please enter valid subdivision");
+                            break;
                     }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine(e.Message);
-                        error = true;
-                    }
-                }
-                while (error);
-
-                Boolean error1 = false;
-                do
-                {
-                    error1 = false;
-                    try
-                    {
-                        Console.WriteLine("Enter Customer name ");
-                        string name = Console.ReadLine();
-                    }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine(e.Message);
-                        error1 = true;
-                    }
-                    error1 = false;
-                    try
-                    {
-                        Console.WriteLine("enter units ");
-                        int units = Convert.ToInt32(Console.ReadLine());
-                        calc(units);
-
-
-                    }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine(e.Message);
-                        error1 = true;
-                    }
-                }
-                while (error1);
-            } while (again == "1");
-        }
-    }
+                    break;
+                default:
+                    Console.WriteLine("please enter valid location");
+                    break;
+            }
+            var resultq = result.total_amount(units);
+            Console.WriteLine("with tax  " + resultq);
+            getdata();
+        }  
+    } 
 }

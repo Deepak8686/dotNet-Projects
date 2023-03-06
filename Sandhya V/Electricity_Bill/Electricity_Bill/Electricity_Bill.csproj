@@ -43,12 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calculation.cs" />
-    <Compile Include="Console.cs" />
+    <Compile Include="Factory_Pattern\Calculation.cs" />
+    <Compile Include="Factory_Pattern\City.cs" />
     <Compile Include="Getdetails.cs" />
+    <Compile Include="Factory_Pattern\Domestic.cs" />
+    <Compile Include="Factory_Pattern\InterfaceEBill.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="switch.cs" />
+    <Compile Include="Factory_Pattern\Village.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
