@@ -13,8 +13,8 @@ namespace Electricity_Bill {
     {
         static void Main(string[] args)
         {
-            Getdetails obj = new Getdetails();
-            obj.data();
+            ConsoleEbill obj = new ConsoleEbill();
+            obj.getdata();
         }
 
     }
