@@ -29,35 +29,41 @@ namespace Abstract_LightDark_Themes
             do
             {
                 char tchoice;
+                int n;
                 Console.WriteLine("\n\nChoose D for Dark Theme\n ");
                 Console.WriteLine("Choose L for Light Theme \n\n");
                 tchoice = char.ToUpper(Console.ReadKey().KeyChar);
+                
                 IThemeFactory factory;
                 switch (tchoice)
                 {
                     case 'D':
-                        Console.BackgroundColor = ConsoleColor.Blue;
-                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.ForegroundColor = ConsoleColor.Red;
                         darkButton.getTheme();
                         darkLabel.getTheme();
                         darkTextBox.getTheme();
+                        Console.WriteLine("Enter number of Fibonacci series you want to generate\n");
+                        n = Convert.ToInt32(Console.ReadLine());
                         factory = new DarkThemeFactory();
-                        for (int i = 0; i < 10; i++)
+                        for (int i = 0; i <= n; i++)
                         {
                             int fib = Fibonacci.Calculate(i, factory);
-                            Console.WriteLine($"Fibonacci({i}) = {fib}\n");
+                            Console.WriteLine($"\nFibonacci({i}) = {fib}\n");
                         }
                         
                         break;
 
                     case 'L':
-                        Console.BackgroundColor = ConsoleColor.Yellow;
-                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        Console.ForegroundColor = ConsoleColor.Yellow;
                         lightButton.getTheme();
                         lightLabel.getTheme();
                         lightTextBox.getTheme();
                         factory = new LightThemeFactory();
-                        for (int i = 0; i < 10; i++)
+                        Console.WriteLine("Enter number of Fibonacci series you want to generate\n");
+                        n = Convert.ToInt32(Console.ReadLine());
+                        for (int i = 0; i<=n; i++)
                         {
                             int fib = Fibonacci.Calculate(i, factory);
                             Console.WriteLine($"\nFibonacci({i}) = {fib} \n");

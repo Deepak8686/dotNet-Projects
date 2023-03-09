@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AbstractFactory.Interfaces
+namespace FibonaciPattern
 {
-    public interface IRateCalculator
+    public interface InterfaceFibonaci
     {
-        double Calculate(int units);
+        string input1(string input2);
     }
 }
