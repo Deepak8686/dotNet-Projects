@@ -9,8 +9,7 @@ public class Program
     private static int userInput;
 
     static void Main(string[] args)
-    {
-       
+    { 
         IterativeInterface calculator1 = new IterativeClass(userInput);
         calculator1.Iterative();
 
@@ -19,6 +18,7 @@ public class Program
       
         CallClass cal = new CallClass();
         cal.userInputs();
+
         Console.ReadKey();
 
     }
