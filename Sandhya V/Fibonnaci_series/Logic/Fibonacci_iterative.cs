@@ -15,7 +15,7 @@ namespace Fibonnaci_series.Logic
             _input2= input2;
         }
 
-        public int Fibonacci_iterative()
+        public void Fibonacci_iterative()
         {
             int first = 0;
             int second = 1;
@@ -28,7 +28,7 @@ namespace Fibonnaci_series.Logic
                 first = second;
                 second = next;
             }
-            return second;
+            
         }
     }
 }

@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fibonaaci_Series
+namespace Fibonacci.Interface
 {
-    public interface InterfaceFibonacci
+    public interface IFibonacci
     {
-        string Getdata(string data);
-      
+        int Fibonacci(int n);
     }
 }
