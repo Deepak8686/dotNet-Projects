@@ -8,6 +8,6 @@ namespace Fibonnaci_series
 {
     public interface Iiteration
     {
-        int Fibonacci_iterative();
+        void Fibonacci_iterative();
     }
 }

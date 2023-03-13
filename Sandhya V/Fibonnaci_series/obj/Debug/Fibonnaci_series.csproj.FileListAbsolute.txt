@@ -1,0 +1,8 @@
+C:\Users\hi\source\Fibonnaci_series\obj\Debug\Fibonnaci_series.csproj.AssemblyReference.cache
+C:\Users\hi\source\Fibonnaci_series\obj\Debug\Fibonnaci_series.csproj.SuggestedBindingRedirects.cache
+C:\Users\hi\source\Fibonnaci_series\obj\Debug\Fibonnaci_series.csproj.CoreCompileInputs.cache
+C:\Users\hi\source\Fibonnaci_series\bin\Debug\Fibonnaci_series.exe.config
+C:\Users\hi\source\Fibonnaci_series\bin\Debug\Fibonnaci_series.exe
+C:\Users\hi\source\Fibonnaci_series\bin\Debug\Fibonnaci_series.pdb
+C:\Users\hi\source\Fibonnaci_series\obj\Debug\Fibonnaci_series.exe
+C:\Users\hi\source\Fibonnaci_series\obj\Debug\Fibonnaci_series.pdb

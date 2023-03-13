@@ -22,6 +22,7 @@ namespace Fibonnaci_series.Logic
             {
                 Console.Write(Frecursion(i) + " ");
             }
+            
         }
         private int Frecursion(int n)
         {
@@ -38,5 +39,6 @@ namespace Fibonnaci_series.Logic
                 return Frecursion(n - 1) + Frecursion(n - 2);
             }
         }
+        
     }
 }
