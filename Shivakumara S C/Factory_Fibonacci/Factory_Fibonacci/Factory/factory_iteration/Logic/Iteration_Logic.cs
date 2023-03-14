@@ -9,9 +9,9 @@ namespace Factory_Fibonacci.Factory.factory_iteration.Logic
 {
     public class Iteration_Logic : Iteration_Interface
     {
-        private readonly int _Iteration;
+        private readonly Double _Iteration;
 
-        public Iteration_Logic(int Iteration) 
+        public Iteration_Logic(Double Iteration) 
         {
             _Iteration = Iteration;
         }
@@ -23,7 +23,7 @@ namespace Factory_Fibonacci.Factory.factory_iteration.Logic
                 int n1 = 0, n2 = 1, n3, i;
                 Console.WriteLine("The Fibonacci Series is :\n");
                 Console.Write(n1 + " " + n2 + " ");
-                for (i = 2; i < _Iteration; ++i)
+                for (i = 2; i <= _Iteration; ++i)
                 {
                     n3 = n1 + n2;
                     Console.Write(n3 + " ");
