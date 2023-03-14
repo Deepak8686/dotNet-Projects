@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Factory_Fibonacci.Factory.Main.CallMethods;
 
 namespace Factory_Fibonacci.Factory.Main
 {
@@ -14,7 +15,8 @@ namespace Factory_Fibonacci.Factory.Main
             {
                 Call_methods call_Methods = new Call_methods();
                 call_Methods.call_methods();
-            }catch(Exception)
+            }
+            catch(Exception)
             {
                 Console.WriteLine("Methods is not available");
             }

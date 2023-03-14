@@ -9,9 +9,9 @@ namespace Factory_Fibonacci.Factory.Factory_recursive.Logic
 {
     public class Recursive_Logic : Recursive_Interface
     {
-        private readonly int _Recursive;
+        private readonly Double _Recursive;
 
-        public Recursive_Logic(int Recursive) 
+        public Recursive_Logic(Double Recursive) 
         {
             _Recursive = Recursive;
         }
@@ -21,13 +21,14 @@ namespace Factory_Fibonacci.Factory.Factory_recursive.Logic
             try
             {
                 Console.WriteLine("The Fibonacci Series is :\n");
-                for (int i = 0; i < _Recursive; i++)
+                for (int i = 0; i <= _Recursive; i++)
                 {
                     Console.Write(Fibonacci(i) + " ");
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("error in Recursive method ");
             }
         }
         private int Fibonacci(int n)
@@ -46,9 +47,10 @@ namespace Factory_Fibonacci.Factory.Factory_recursive.Logic
                 {
                     return Fibonacci(n - 1) + Fibonacci(n - 2);
                 }
-            }catch(Exception e)
+            }
+            catch(Exception)
             {
-                Console.WriteLine(e.ToString());
+                Console.WriteLine("error in Recursive method ");
                 return 0;
             }
         }

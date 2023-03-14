@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace FactoryFibProgram.Interface
 {
-    public interface IterativeInterface
+    public interface FibonacciInterface
     {
+        void CalculateFibonacciSeries();
         void Iterative();
     }
 }

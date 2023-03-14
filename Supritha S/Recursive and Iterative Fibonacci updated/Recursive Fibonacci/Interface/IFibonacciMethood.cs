@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FactoryFibProgram.Interface
+namespace Recursive_Fibonacci
 {
-    public interface RecursiveInterface
+    public interface IFibonacciMethod
     {
-        void CalculateFibonacciSeries();
+        void Fibonacci();
     }
 }
