@@ -13,16 +13,17 @@ namespace Itterativeapproach
 {
     public class calculation
     {
-        int value,options;
+        double value;
+         string   options;
         public void calc()
         {
-            ITerativeInterface1 iterativeInterface1 = null;
-            RecursiveInterface1 recursiveInterface1= null;
+            ITerativeInterface1 iterativeInterface1;
+            RecursiveInterface1 recursiveInterface1;
            
             try
             {
                 Console.WriteLine("Enter the length of fibonaci series");
-                value = Convert.ToInt32(Console.ReadLine());
+                value = Convert.ToDouble(Console.ReadLine());
                 if (value<=0)
                 {
                     Console.WriteLine("Enter the number positive number and should be above zero");
@@ -41,8 +42,8 @@ namespace Itterativeapproach
                 {
 
                     Console.WriteLine("Enter 1 for iterative approach and 2 for recursive approach");
-                    options = Convert.ToInt32(Console.ReadLine());
-                    if (options == 1 || options == 2)
+                    options = Console.ReadLine();
+                    if (options == "1" || options == "2")
                     {
                         optionmethod();
                     }
@@ -62,12 +63,12 @@ namespace Itterativeapproach
                 {
                     switch (options)
                     {
-                        case 1:
+                        case "1":
                             iterativeInterface1=new Iterativefibonacci(value);
                             iterativeInterface1.Iterativefibo();
                             break;
 
-                        case 2:
+                        case "2":
                             recursiveInterface1= new RecusiveFibonacci(value);
                             recursiveInterface1.Recursivecal();
                             break;
@@ -78,6 +79,7 @@ namespace Itterativeapproach
                     }
                 }
             }
+            calc();
         }
     }
 }
