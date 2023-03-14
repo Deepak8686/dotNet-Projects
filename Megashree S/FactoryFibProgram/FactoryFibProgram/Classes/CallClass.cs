@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,59 +15,88 @@ namespace FactoryFibProgram.Classes
             while (true)
             {
                 try
-                { 
-               
+                {
+
                     Console.WriteLine("\nEnter '1' to calculate the Fibonacci series using recursion OR Enter '2' to calculate Fibonacci series using iteration.");
                     int choice = int.Parse(Console.ReadLine());
-
-                    Console.WriteLine("Enter the number of terms you want in the Fibonacci series.");
-                    int n = int.Parse(Console.ReadLine());
-                    try
+                    if (choice != 1 && choice != 2)
                     {
-                        if (n < 0)
-                        {
-                            Console.WriteLine("Invalid input! Please enter a positive integer.");
-
-                        }
+                        Console.WriteLine("Invalid choice!");
+                        continue;
                     }
-                    catch (Exception)
 
-                    {
-                        Console.WriteLine("Invalid input! Please enter a number.");
-                    }
+                    double n = GetValidInput("Enter the number of terms you want in the Fibonacci series:");
 
                     Console.WriteLine("The Fibonacci series is: ");
 
-                        if (choice == 1)
+                    if (choice == 1)
+                    {
+                        FibonacciClass rc = new FibonacciClass(n);
+                        rc.CalculateFibonacciSeries();
+                    }
+                    else if (choice == 2)
+                    {
+                        FibonacciClass ic = new FibonacciClass(n);
+                        ic.Iterative();
+                    }
+                    //Console.WriteLine("\n\nPress Enter to calculate the Fibonacci series again or any other key to exit.");
+                    //if (Console.ReadKey().Key != ConsoleKey.Enter)
+                    //{
+                    //    break;
+                    //}
+
+                    while (true)
+                    { 
+                    Console.WriteLine("\n\nPress 'y' to calculate the Fibonacci series again, 'n' to exit, or any other key to show an error message.");
+                    char checkdata = Console.ReadKey().KeyChar;
+                        if (checkdata == 'y')
                         {
-                            RecursiveClass rc = new RecursiveClass(n);
-                            rc.CalculateFibonacciSeries();
+                            userInputs();
                         }
-                        else if (choice == 2)
+                        else if (checkdata == 'n')
                         {
-                            IterativeClass ic = new IterativeClass(n);
-                            ic.Iterative();
+                           Environment.Exit(0);
                         }
                         else
                         {
-                            Console.WriteLine("Invalid choice!");
+                            Console.WriteLine("\nInvalid input. Please enter 'y' to generate the Fibonacci series again, 'n' to exit, or any other key to show an error message.");
+                            
                         }
-
-                        Console.WriteLine("\n\nPress Enter to calculate the Fibonacci series again or any other key to exit.");
-
-                        if (Console.ReadKey().Key != ConsoleKey.Enter)
-                        {
-                            break;
-                        }
-                    }
-                    catch (FormatException)
-                    {
-                        Console.WriteLine("Invalid input! Please enter a number.");
-                    }
+                      
+                }
 
                 }
-               
-            }
+
+                catch (FormatException)
+                {
+                Console.WriteLine("Invalid input! Please enter a number.");
+                }
+            } 
+        }
+                 private double GetValidInput(string message)
+                 {
+                 double n;
+                 while (true)
+                 {
+                 Console.WriteLine(message);
+                 try
+                 {
+                    n = double.Parse(Console.ReadLine());
+                    if (n < 0)
+                    {
+                        Console.WriteLine("Invalid input! Please enter a positive integer.");
+                    }
+                    else
+                    {
+                        return n;
+                    }
+                 }
+                 catch (FormatException)
+                 {
+                    Console.WriteLine("Invalid input! Please enter a number.");
+                 }
+             }
+           }
         }
     }
 

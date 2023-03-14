@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fibonnaci_series
+namespace Recursive_Fibonacci
 {
-    public interface Iiteration
+    public interface IRecursive
     {
-        void Fibonacci_iterative();
+        int Recursive(int i);
     }
 }

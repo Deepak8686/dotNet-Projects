@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fibonaaci_Series
+namespace FibonacciseriesRI
 {
-    public interface InterfaceFibonacci
+    public interface IRecursiveIterative
     {
-        string Getdata(string data);
-      
+        void Fibo();
     }
 }
