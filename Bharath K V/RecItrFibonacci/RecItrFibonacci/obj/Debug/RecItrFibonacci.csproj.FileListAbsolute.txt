@@ -1,8 +1,0 @@
-C:\Users\hi\source\repos\RecItrFibonacci\RecItrFibonacci\bin\Debug\RecItrFibonacci.exe.config
-C:\Users\hi\source\repos\RecItrFibonacci\RecItrFibonacci\bin\Debug\RecItrFibonacci.exe
-C:\Users\hi\source\repos\RecItrFibonacci\RecItrFibonacci\bin\Debug\RecItrFibonacci.pdb
-C:\Users\hi\source\repos\RecItrFibonacci\RecItrFibonacci\obj\Debug\RecItrFibonacci.csproj.AssemblyReference.cache
-C:\Users\hi\source\repos\RecItrFibonacci\RecItrFibonacci\obj\Debug\RecItrFibonacci.csproj.SuggestedBindingRedirects.cache
-C:\Users\hi\source\repos\RecItrFibonacci\RecItrFibonacci\obj\Debug\RecItrFibonacci.csproj.CoreCompileInputs.cache
-C:\Users\hi\source\repos\RecItrFibonacci\RecItrFibonacci\obj\Debug\RecItrFibonacci.exe
-C:\Users\hi\source\repos\RecItrFibonacci\RecItrFibonacci\obj\Debug\RecItrFibonacci.pdb
