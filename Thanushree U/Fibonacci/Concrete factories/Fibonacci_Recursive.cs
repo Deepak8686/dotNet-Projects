@@ -9,12 +9,12 @@ namespace Fibonacci.Concrete_factories
 {
     public class Fibonacci_Recursive:IFibonacci
     {
-        private readonly int _n;
-        public Fibonacci_Recursive(int n)
+        private readonly double _n;
+        public Fibonacci_Recursive(double n)
         {
             _n = n;
         }
-        public int Fibonacci(int n)
+        public int Fibonacci(double n)
         {
             
             if (n == 0)
@@ -26,8 +26,8 @@ namespace Fibonacci.Concrete_factories
                 return 1;
             }
             else
-            {
-                return Fibonacci(n - 1) + Fibonacci(n - 2);
+            {                
+                return Fibonacci(n-1)+Fibonacci(n-2);
             }
         }
     }

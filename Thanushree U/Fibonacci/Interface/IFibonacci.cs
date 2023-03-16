@@ -8,6 +8,6 @@ namespace Fibonacci.Interface
 {
     public interface IFibonacci
     {
-        int Fibonacci(int n);
+        int Fibonacci(double n);
     }
 }

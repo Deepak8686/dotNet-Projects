@@ -1,0 +1,8 @@
+C:\Users\hi\source\repos\Itterativeapproach\bin\Debug\Itterativeapproach.exe.config
+C:\Users\hi\source\repos\Itterativeapproach\bin\Debug\Itterativeapproach.exe
+C:\Users\hi\source\repos\Itterativeapproach\bin\Debug\Itterativeapproach.pdb
+C:\Users\hi\source\repos\Itterativeapproach\obj\Debug\Itterativeapproach.csproj.AssemblyReference.cache
+C:\Users\hi\source\repos\Itterativeapproach\obj\Debug\Itterativeapproach.csproj.SuggestedBindingRedirects.cache
+C:\Users\hi\source\repos\Itterativeapproach\obj\Debug\Itterativeapproach.csproj.CoreCompileInputs.cache
+C:\Users\hi\source\repos\Itterativeapproach\obj\Debug\Itterativeapproach.exe
+C:\Users\hi\source\repos\Itterativeapproach\obj\Debug\Itterativeapproach.pdb

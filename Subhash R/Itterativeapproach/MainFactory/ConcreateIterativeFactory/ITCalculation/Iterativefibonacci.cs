@@ -9,30 +9,29 @@ namespace Itterativeapproach.MainFactory.IterativeFactory.ITCalculation
 {
     public class Iterativefibonacci : ITerativeInterface1
     {
-        private readonly int _IFibo;
+        private readonly double _IFibo;
 
-        public Iterativefibonacci(int IFibo)
+        public Iterativefibonacci(double IFibo)
         {
             _IFibo = IFibo;
         }
         public void Iterativefibo()
         {
-
             try
             {
                 int firstnumber = 0, secondnumber = 1, result, i;
                 Console.WriteLine(" the length of fibonaci series");
-                Console.Write(firstnumber+" "+secondnumber+" ");
+                Console.WriteLine(firstnumber+" \n"+secondnumber+" ");
                 for (i=2; i < _IFibo; i++)
                 {
                     result=firstnumber + secondnumber;
-                    Console.Write(result+"  ");
+                    Console.WriteLine(result+"  ");
                     firstnumber=secondnumber;
                     secondnumber=result;
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 Console.WriteLine("enter a numercal value");
             }

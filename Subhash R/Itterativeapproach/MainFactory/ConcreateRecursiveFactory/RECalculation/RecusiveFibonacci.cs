@@ -11,9 +11,9 @@ namespace Itterativeapproach.MainFactory.RecursiveFactory.RECalculation
 {
     public class RecusiveFibonacci: RecursiveInterface1
     {
-        private readonly int _fibonaccirecursive;
+        private readonly double _fibonaccirecursive;
 
-        public RecusiveFibonacci(int fibonaccirecursive)
+        public RecusiveFibonacci(double fibonaccirecursive)
         {
             _fibonaccirecursive=fibonaccirecursive;
         }
