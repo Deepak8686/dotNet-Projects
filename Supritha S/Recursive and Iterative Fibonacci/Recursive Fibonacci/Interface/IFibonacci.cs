@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fibonacci.Interface
+namespace Recursive_Fibonacci
 {
     public interface IFibonacci
     {
-        int Fibonacci(double n);
+        int Fibonacci(int i);
     }
 }

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fibonacci.Interface
+namespace ClientSide.Interface
 {
-    public interface IFibonacci
+    internal interface IClient
     {
-        int Fibonacci(double n);
+        void ClientSocket();
     }
 }
