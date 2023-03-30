@@ -1,0 +1,111 @@
+Data Annotations:
+--------------------------------------------------------------------
+
+	Data annotations refer to the use of attributes or metadata that can be applied to classes and their properties in order to provide additional information about the data being transmitted.
+
+	These annotations can be used to specify things like data types, required fields, length or format constraints, and other rules that the API should enforce when processing incoming requests or returning responses. They can also be used to provide documentation or descriptive information about the data that is being exchanged.
+
+	Data annotations are commonly used to define and validate the API contracts, ensuring that the data being transmitted is in the correct format and meets any necessary requirements.
+
+Example:
+--------
+public class UserRegister
+    {
+	 public int Id { get; set; }
+
+        [Required(ErrorMessage = "Name is required.")]
+        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Field must contain only alphabets.")]
+        public string Name { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Email is required.")]
+        [EmailAddress(ErrorMessage = "Invalid email address.")]
+        public string Email { get; set; } = string.Empty;
+
+        public string Address { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Password field is required")]
+        [RegularExpression(@"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$",
+            ErrorMessage = "Password should contain atleast one lowercase,uppercase,number and a symbol")]
+        public string Password { get; set; } = string.Empty;
+}
+
+
+
+
+Action Filters:
+---------------------------------------------------------------------
+
+	Action filters are a type of filter in ASP.NET Web API that are used to modify the behavior of a particular action method or controller. They can be used to perform pre- or post-processing logic, such as logging, caching, or authentication, before or after the action method executes.
+
+
+public class LogRequestAttribute : ActionFilterAttribute
+{
+    public override void OnActionExecuting(HttpActionContext actionContext)
+    {
+        Debug.WriteLine("Request: " + actionContext.Request.Method + " " + actionContext.Request.RequestUri);
+        base.OnActionExecuting(actionContext);
+    }
+}
+
+	In this example, the LogRequestAttribute class overrides the OnActionExecuting method of the ActionFilterAttribute class. This method is called before the action method executes. The implementation logs the request method and URI using the Debug.WriteLine method, which sends the log message to the debugger output window. Finally, the implementation calls the base implementation of OnActionExecuting to allow the action method to execute.
+
+ 	By using action filters, we can avoid duplicating code across multiple action methods or controllers, and we can easily modify or remove the filter behavior without affecting the underlying action method logic.
+
+
+
+Exception Filters:
+--------------------------------------------------------------------------
+
+	Exception filters in WebAPI are used to handle and customize exceptions that are thrown during the execution of an HTTP request. They provide a way to catch and handle exceptions that are not handled by the application code or the global error handling mechanism.
+
+Example:
+--------
+ public class UserEmailException : Exception
+    {
+        public UserEmailException() { }
+        public UserEmailException(string message) : base(message) { }
+    }
+    public class RoleIdException : Exception
+    {
+        public RoleIdException() { }
+        public RoleIdException(string message) : base(message) { }
+    }
+
+    
+    public class CustomExceptionFilterAttribute : Microsoft.AspNetCore.Mvc.Filters.ExceptionFilterAttribute
+    {
+        public override void OnException(ExceptionContext context)
+        {
+            switch (context.Exception)
+            {
+                case RoleIdException:
+                    context.Result = new BadRequestObjectResult("A role with this roleId is already exists.");
+                    break;
+                case UserEmailException:
+                    context.Result = new BadRequestObjectResult("The email entered is already registered");
+                    break;
+                case ArgumentNullException:
+                    context.Result = new BadRequestObjectResult("Argument Null Exception exception occurred.");
+                    break;
+            }
+            context.ExceptionHandled = true;
+        }
+    }
+}
+
+	Implementing an exception filter in WebAPI is to provide a way to handle and customize exceptions that are not handled by the application code or the global error handling mechanism. This can be useful in scenarios where we need to provide a custom error response to the client or log the exception for debugging purposes. Exception filters can also help to improve the user experience by providing more meaningful error messages and reducing the amount of technical details that are exposed to the client.
+
+
+
+
+Inversion of Control:
+--------------------------------------------------------------------------------
+
+	Inversion of Control (IoC) is a design principle in software engineering that refers to a pattern where the control of object creation and flow of execution is inverted or moved from the application code to a framework or container. In other words, instead of the application code explicitly creating and managing its dependencies, the framework or container is responsible for creating and managing those dependencies and making them available to the application code.
+
+	The Inversion-of-Control (IoC) pattern, is about providing any kind of callback, which "implements" and/or controls reaction, instead of acting ourselves directly (in other words, inversion and/or redirecting control to the external handler/controller). The Dependency-Injection (DI) pattern is a more specific version of IoC pattern, and is all about removing dependencies from the code.
+
+
+
+
+
